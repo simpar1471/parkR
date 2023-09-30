@@ -1,0 +1,59 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# parkR: Functions I find helpful in R
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The parkR package contains functions which I find useful as I'm working in R,
+especially when making reports in R Markdown. Included are some functions for
+quickly setting up HTML notebooks with R Markdown and Bookdown, and some helpful
+functions for applying Markdown, LaTeX commands, or HTML tags to text data in R.
+
+## Installation
+You can install the development version of parkR using the `devtools` package:
+
+```r
+devtools::install_github(repo = "simpar1471/parkR")
+```
+
+## Useful functions
+
+### `use_html_rmd()`
+This function generates a main `.rmd` file, either with or without children, and
+sets some nice defaults for its use. This `.rmd` file will knit to HTML.
+
+### `use_bibliography()`
+This function generates a folder containing a `.bib` and `.csl` file for
+including citations in R Markdown documents. I've written this as I often need
+to cite sources in my work, but the basic R Markdown project setup in PyCharm
+does not include these features.
+
+### `use_rmd_sections()`
+This function generates a folder containing child `.rmd` files. These can be
+included in the parent `rmd.` file using the knitr chunk option `child = ...`.
+
+## Plans for updates
+* Add `use_pdf_rmd()`, `use_powerpoint_rmd()` and friends to automate these
+  tasks as well.
+* Make the website look nicer. It's a bit barren at the moment.
+* Add any plotting stuff I'm doing often.
+* Add a hex sticker and a `use_hex_sticker()` function, for when you're doing
+  your own package development.
+
+## Feedback
+Feedback is greatly appreciated, and should be done on the
+[GitHub issues page](https://www.github.com/parkR/issues). Please be kind.
