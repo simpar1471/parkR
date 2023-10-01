@@ -4,6 +4,11 @@
 \alias{md_bold}
 \alias{md_italic}
 \alias{md_code}
+\alias{md_superscript}
+\alias{md_subscript}
+\alias{md_footnote}
+\alias{md_math}
+\alias{md_eq}
 \title{Add basic Markdown formatting to strings}
 \usage{
 md_bold(str)
@@ -11,6 +16,16 @@ md_bold(str)
 md_italic(str)
 
 md_code(str)
+
+md_superscript(str)
+
+md_subscript(str)
+
+md_footnote(str)
+
+md_math(str)
+
+md_eq(str)
 }
 \arguments{
 \item{str}{A string or vector of strings to be tagged.}
@@ -21,7 +36,7 @@ A character vector with HTML tags applied, the same length as \code{str}.
 \description{
 These functions take a vector of input strings, and apply the
 approriate Markdown formatting for each function. I often find then useful
-when making tables with the \link{gt} package.
+when making tables with the \code{{gt}} package.
 }
 \examples{
 # Add a tag for bold

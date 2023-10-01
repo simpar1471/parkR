@@ -35,3 +35,8 @@ referencing styles by a range of softwares, including
 \href{https://github.com/jgm/citeproc}{citeproc}, the default citation processor
 in \href{https://bookdown.org/yihui/bookdown/citations.html}{bookdown}.
 }
+\examples{
+\dontrun{
+download_csl(csl_style = "elsevier_harvard")
+}
+}

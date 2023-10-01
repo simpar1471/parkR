@@ -15,6 +15,10 @@ use_rmd_html(
 )
 }
 \arguments{
+\item{rmd_file}{Name of the main \code{.rmd} document, which will have YAML for
+a \code{\link[bookdown:html_document2]{bookdown::html_document2()}} output. If \code{child_dir} is specified, this file
+will contain a code chunk for including child \code{.rmd} files.}
+
 \item{bib_dir}{Name of directory which will contain \code{.bib} and \code{.csl} file
 for referencing. Default = \code{"bibliography"}.}
 
@@ -26,16 +30,16 @@ for referencing. Default = \code{"bibliography"}.}
 \code{.csl} file name without the file extension, e.g. for \code{my-csl-style.csl},
 provide "my-csl-style". Default = \code{"elsevier-harvard"}.}
 
-\item{child_prefix}{The file name suffix for children \code{.rmd} files in
-the \code{sections} folder. Default = "sec".}
+\item{child_dir}{If not \code{NULL}, specifies the name of the directory which
+will contain child \code{.rmd} documents, which will be created by
+\code{use_rmd_sections()}. Default = \code{NULL}.}
+
+\item{child_prefix}{The file name prefix for child \code{.rmd} files in the folder
+specified by \code{child_dir}. Default = "sec".}
 
 \item{overwrite}{Logical value denoting whether files should be overwritten
 automatically. If \code{FALSE}, the function will ask before overwriting. If
 \code{TRUE}, the function will ask, then overwrite. Default = FALSE.}
-
-\item{sections}{If TRUE, create a folder called \code{sections} in which child
-\code{.rmd} files will be placed to build up the overall parent \code{.rmd} file.
-Default = FALSE.}
 }
 \description{
 Sets up folders/files in the working directory for an R Markdown

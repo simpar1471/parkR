@@ -20,6 +20,9 @@ use_bibliography(
 \href{https://www.zotero.org/styles}{Zotero Style Repository} or \href{https://github.com/citation-style-language/styles}{GitHub CSL repository}. Should be the
 \code{.csl} file name without the file extension, e.g. for \code{my-csl-style.csl},
 provide "my-csl-style". Default = \code{"elsevier-harvard"}.}
+
+\item{overwrite}{Should the function overwrite files without asking? Default
+= \code{FALSE}.}
 }
 \description{
 Generate a directory with a bibliography and CSL file.

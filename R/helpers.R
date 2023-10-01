@@ -14,6 +14,10 @@
 #' @param zotero_first If `TRUE`, the function will attempt to download from the
 #' Zotero Style Repository first. If `FALSE`, the function will attempt to
 #' download from GitHub first. Default = `TRUE`.
+#' @examples
+#' \dontrun{
+#' download_csl(csl_style = "elsevier_harvard")
+#' }
 #' @returns If the download was successful, a one-length character vector
 #' with the path of the downloaded `.csl` file. If unsuccessful, stops with
 #' error.
@@ -58,7 +62,7 @@ download_csl <- function(csl_style = "elsevier-harvard",
 #' Is a directory an R package?
 #'
 #' @param base_path Directory to test with
-#' `rprojroot::find_package_root_file()`. Default = `usethis::proj_get()`.
+#' [rprojroot::find_package_root_file()]. Default = [usethis::proj_get()].
 #' @returns Logical value based on whether `base_path` was an R package.
 #' @keywords internal
 is_package <- function(base_path = usethis::proj_get()) {
@@ -79,3 +83,24 @@ create_dir_or_warn <- function(dir) {
     cli::cli_warn("A directory called {.file '{dir}'} already exists.")
   }
 }
+
+#' Construct a glue expression using square brackets
+#' @description Wrapper around [glue::glue()], that uses square brackets instead
+#' of the usual curly braces. Can be useful when substituting R expressions in
+#' strings for LaTeX code, where curly braces are often used for formatting.
+#' @param ... Unnamed arguments are taken to be expression string(s) to format.
+#' Multiple inputs are concatenated together before formatting.
+#' Named arguments are taken to be temporary variables available for
+#' substitution.
+#' @seealso [glue::glue()], which this function wraps.
+#' @examples
+#' italics_str <- "italics"
+#'
+#' # Will not provide a well-formatted string
+#' glue::glue("I want this in \\textit{{italics_str}}!")
+#'
+#' # Will give a correctly formatted result
+#' sqglue("I want this in \\textit{[italics_str]}!")
+#' @returns A one-length character vector.
+#' @export
+sqglue <- function(...) glue::glue(..., .open = "[", .close = "]")

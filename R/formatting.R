@@ -40,13 +40,13 @@ html_strikethrough <- function(str) html_tag(str, tag = "del")
 
 #' Surround a string with characters
 #' @keywords internal
-surround_with_str <- function(surround) paste0(surround, str, surround)
+surround_with_str <- function(str, surround) paste0(surround, str, surround)
 
 #' Add basic Markdown formatting to strings
 #'
 #' @description These functions take a vector of input strings, and apply the
 #' approriate Markdown formatting for each function. I often find then useful
-#' when making tables with the [gt] package.
+#' when making tables with the `{gt}` package.
 #' @param str A string or vector of strings to be tagged.
 #' @examples
 #' # Add a tag for bold
@@ -68,6 +68,26 @@ md_italic <- function(str) surround_with_str(str, surround = "*")
 #' @export
 #' @rdname md_bold
 md_code <- function(str) surround_with_str(str, surround = "`")
+
+#' @export
+#' @rdname md_bold
+md_superscript <- function(str) surround_with_str(str, surround = "^")
+
+#' @export
+#' @rdname md_bold
+md_subscript <- function(str) surround_with_str(str, surround = "~")
+
+#' @export
+#' @rdname md_bold
+md_footnote <- function(str) paste0("^[", str, "]")
+
+#' @export
+#' @rdname md_bold
+md_math <- function(str) surround_with_str(str, surround = "$")
+
+#' @export
+#' @rdname md_bold
+md_eq <- function(str) surround_with_str(str, surround = "$$")
 
 
 #' Apply a latex command to a vector of strings
