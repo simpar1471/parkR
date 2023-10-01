@@ -79,3 +79,24 @@ create_dir_or_warn <- function(dir) {
     cli::cli_warn("A directory called {.file '{dir}'} already exists.")
   }
 }
+
+#' Construct a glue expression using square brackets
+#' @description Wrapper around [glue::glue()], that uses square brackets instead
+#' of the usual curly braces. Can be useful when substituting R expressions in
+#' strings for LaTeX code, where curly braces are often used for formatting.
+#' @param ... Unnamed arguments are taken to be expression string(s) to format.
+#' Multiple inputs are concatenated together before formatting.
+#' Named arguments are taken to be temporary variables available for
+#' substitution.
+#' @seealso [glue::glue()], which this function wraps.
+#' @examples
+#' italics_str <- "italics"
+#'
+#' # Will not provide a well-formatted string
+#' glue::glue("I want this in \\textit{{italics_str}}!")
+#'
+#' # Will give a correctly formatted result
+#' sqglue("I want this in \\textit{[italics_str]}!")
+#' @returns A one-length character vector.
+#' @export
+sqglue <- function(...) glue::glue(..., .open = "[", .close = "]")
