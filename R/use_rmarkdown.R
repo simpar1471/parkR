@@ -65,7 +65,11 @@ use_bibliography <- function(bib_dir = "bibliography",
   csl_path <- file.path(bib_dir, csl_file)
   create_dir_or_warn(bib_dir)
   csl_temp <- download_csl(csl_style = csl_style)
-  bib_lines <- c(gsub(x = unname(unclass(toBibtex(citation(package = "base")))),
+  r_bibtex <- utils::citation(package = "base") |>
+    utils::toBibtex() |>
+    unname() |>
+    unclass()
+  bib_lines <- c(gsub(x = r_bibtex,
                       pattern = "\\{,$",
                       replacement = "\\{rlang2023,"),
                  "")
