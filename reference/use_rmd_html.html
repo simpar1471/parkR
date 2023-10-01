@@ -12,7 +12,7 @@ document which will knit to HTML."><!-- mathjax --><script src="https://cdnjs.cl
     
     <a class="navbar-brand me-2" href="../index.html">parkR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.2</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +64,13 @@ document which will knit to HTML.</p>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>bib_dir</dt>
+    <dl><dt>rmd_file</dt>
+<dd><p>Name of the main <code>.rmd</code> document, which will have YAML for
+a <code>bookdown::html_document2()</code> output. If <code>child_dir</code> is specified, this file
+will contain a code chunk for including child <code>.rmd</code> files.</p></dd>
+
+
+<dt>bib_dir</dt>
 <dd><p>Name of directory which will contain <code>.bib</code> and <code>.csl</code> file
 for referencing. Default = <code>"bibliography"</code>.</p></dd>
 
@@ -81,21 +87,21 @@ for referencing. Default = <code>"bibliography"</code>.</p></dd>
 provide "my-csl-style". Default = <code>"elsevier-harvard"</code>.</p></dd>
 
 
+<dt>child_dir</dt>
+<dd><p>If not <code>NULL</code>, specifies the name of the directory which
+will contain child <code>.rmd</code> documents, which will be created by
+<code>use_rmd_sections()</code>. Default = <code>NULL</code>.</p></dd>
+
+
 <dt>child_prefix</dt>
-<dd><p>The file name suffix for children <code>.rmd</code> files in
-the <code>sections</code> folder. Default = "sec".</p></dd>
+<dd><p>The file name prefix for child <code>.rmd</code> files in the folder
+specified by <code>child_dir</code>. Default = "sec".</p></dd>
 
 
 <dt>overwrite</dt>
 <dd><p>Logical value denoting whether files should be overwritten
 automatically. If <code>FALSE</code>, the function will ask before overwriting. If
 <code>TRUE</code>, the function will ask, then overwrite. Default = FALSE.</p></dd>
-
-
-<dt>sections</dt>
-<dd><p>If TRUE, create a folder called <code>sections</code> in which child
-<code>.rmd</code> files will be placed to build up the overall parent <code>.rmd</code> file.
-Default = FALSE.</p></dd>
 
 </dl></div>
 

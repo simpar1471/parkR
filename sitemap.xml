@@ -31,6 +31,12 @@
     <loc>https://simpar1471.github.io/parkR/reference/md_bold.html</loc>
   </url>
   <url>
+    <loc>https://simpar1471.github.io/parkR/reference/rmd_cref_tab.html</loc>
+  </url>
+  <url>
+    <loc>https://simpar1471.github.io/parkR/reference/rmd_crossref.html</loc>
+  </url>
+  <url>
     <loc>https://simpar1471.github.io/parkR/reference/rmd_lines_child.html</loc>
   </url>
   <url>
@@ -49,6 +55,9 @@
     <loc>https://simpar1471.github.io/parkR/reference/rmd_lines_yaml.html</loc>
   </url>
   <url>
+    <loc>https://simpar1471.github.io/parkR/reference/sqglue.html</loc>
+  </url>
+  <url>
     <loc>https://simpar1471.github.io/parkR/reference/surround_with_str.html</loc>
   </url>
   <url>
@@ -59,6 +68,9 @@
   </url>
   <url>
     <loc>https://simpar1471.github.io/parkR/reference/use_bibliography.html</loc>
+  </url>
+  <url>
+    <loc>https://simpar1471.github.io/parkR/reference/use_hexsticker.html</loc>
   </url>
   <url>
     <loc>https://simpar1471.github.io/parkR/reference/use_rmd_children.html</loc>
