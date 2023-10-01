@@ -1,0 +1,10 @@
+test_that("multiplication works", {
+  expect_equal(md_bold(str = "test"), expected = "**test**")
+  expect_equal(md_italic(str = "test"), expected = "*test*")
+  expect_equal(md_code(str = "test"), expected = "`test`")
+  expect_equal(md_superscript(str = "test"), expected = "^test^")
+  expect_equal(md_subscript(str = "test"), expected = "~test~")
+  expect_equal(md_footnote(str = "test"), expected = "^[test]")
+  expect_equal(md_math(str = "test"), expected = "$test$")
+  expect_equal(md_eq(str = "test"), expected = "$$test$$")
+})
