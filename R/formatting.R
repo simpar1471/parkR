@@ -46,7 +46,7 @@ surround_with_str <- function(str, surround) paste0(surround, str, surround)
 #'
 #' @description These functions take a vector of input strings, and apply the
 #' approriate Markdown formatting for each function. I often find then useful
-#' when making tables with the [gt] package.
+#' when making tables with the `{gt}` package.
 #' @param str A string or vector of strings to be tagged.
 #' @examples
 #' # Add a tag for bold

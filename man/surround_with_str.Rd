@@ -4,7 +4,7 @@
 \alias{surround_with_str}
 \title{Surround a string with characters}
 \usage{
-surround_with_str(surround)
+surround_with_str(str, surround)
 }
 \description{
 Surround a string with characters

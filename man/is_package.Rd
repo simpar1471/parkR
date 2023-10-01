@@ -8,7 +8,7 @@ is_package(base_path = usethis::proj_get())
 }
 \arguments{
 \item{base_path}{Directory to test with
-\code{rprojroot::find_package_root_file()}. Default = \code{usethis::proj_get()}.}
+\code{\link[rprojroot:find_root_file]{rprojroot::find_package_root_file()}}. Default = \code{\link[usethis:proj_utils]{usethis::proj_get()}}.}
 }
 \value{
 Logical value based on whether \code{base_path} was an R package.
