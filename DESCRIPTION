@@ -1,7 +1,7 @@
 Type: Package
 Package: parkR
 Title: Possibly Useful Functions From Simon Parker
-Version: 0.0.1
+Version: 0.0.2
 Date: 2023-09-30
 Authors@R:
     person(given = "Simon", family = "Parker",
