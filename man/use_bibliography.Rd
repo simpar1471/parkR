@@ -19,7 +19,7 @@ use_bibliography(
 \item{csl_style}{A CSL style specification from the
 \href{https://www.zotero.org/styles}{Zotero Style Repository} or \href{https://github.com/citation-style-language/styles}{GitHub CSL repository}. Should be the
 \code{.csl} file name without the file extension, e.g. for \code{my-csl-style.csl},
-provide "my-csl-style". Default = \code{"elsevier-harvard"}.}
+provide \code{"my-csl-style"}. Default = \code{"elsevier-harvard"}.}
 
 \item{overwrite}{Should the function overwrite files without asking? Default
 = \code{FALSE}.}

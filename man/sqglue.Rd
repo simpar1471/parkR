@@ -21,12 +21,11 @@ of the usual curly braces. Can be useful when substituting R expressions in
 strings for LaTeX code, where curly braces are often used for formatting.
 }
 \examples{
-italics_str <- "italics"
+italics_str <- "italic text"
+# Double-curly braces escape each other, so italics_str is not interpreted
+glue::glue("I want this in \\\\textit{{italic_str}}!")
 
-# Will not provide a well-formatted string
-glue::glue("I want this in \\\\textit{{italics_str}}!")
-
-# Will give a correctly formatted result
+# Square braces, so italics_str is incorporated properly
 sqglue("I want this in \\\\textit{[italics_str]}!")
 }
 \seealso{

@@ -15,7 +15,7 @@ download_csl(
 \item{csl_style}{A CSL style specification from the
 \href{https://www.zotero.org/styles}{Zotero Style Repository} or \href{https://github.com/citation-style-language/styles}{GitHub CSL repository}. Should be the
 \code{.csl} file name without the file extension, e.g. for \code{my-csl-style.csl},
-provide "my-csl-style". Default = \code{"elsevier-harvard"}.}
+provide \code{"my-csl-style"}. Default = \code{"elsevier-harvard"}.}
 
 \item{csl_file}{A file path for \code{download_csl} to download to. Default =
 \code{tempfile(fileext = ".csl")}.}
@@ -25,15 +25,15 @@ Zotero Style Repository first. If \code{FALSE}, the function will attempt to
 download from GitHub first. Default = \code{TRUE}.}
 }
 \value{
-If the download was successful, a one-length character vector
-with the path of the downloaded \code{.csl} file. If unsuccessful, stops with
-error.
+One-length character vector with the path of the downloaded \code{.csl}
+file.
 }
 \description{
-Citation Style Language (CSL) files are used to control
-referencing styles by a range of softwares, including
-\href{https://github.com/jgm/citeproc}{citeproc}, the default citation processor
-in \href{https://bookdown.org/yihui/bookdown/citations.html}{bookdown}.
+Citation Style Language (CSL) files are used to control referencing styles in
+a range of softwares, including \href{https://github.com/jgm/citeproc}{citeproc},
+the default citation processor in
+\href{https://bookdown.org/yihui/bookdown/citations.html}{bookdown}.
+\code{download_csl} downloads these for you from either the \href{https://www.zotero.org/styles}{Zotero Style Repository} or \href{https://github.com/citation-style-language/styles}{GitHub CSL repository}.
 }
 \examples{
 \dontrun{

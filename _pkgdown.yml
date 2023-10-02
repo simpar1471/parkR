@@ -27,7 +27,7 @@ reference:
     desc: |
       Construct `{bookdown}` [cross-references](https://bookdown.org/yihui/rmarkdown-cookbook/cross-ref.html) for tables, figures, or equations
     contents:
-      - rmd_cref_tab
+      - rmd-crossref
   - title: Miscellaneous functions
     contents:
       - sqglue
